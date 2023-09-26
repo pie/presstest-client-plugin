@@ -1,5 +1,5 @@
 import "./main.scss"
 import React from 'react'
 import ReactDOM from 'react-dom'
-import TestComponent from './components/TestComponent'
-ReactDOM.render(<TestComponent />, document.querySelector("#app"))
+import App from './App'
+ReactDOM.render(<App />, document.querySelector("#app"))

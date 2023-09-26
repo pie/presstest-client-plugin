@@ -1,5 +1,6 @@
 <?php
 
+namespace PIE\ClassAdminPage;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -24,9 +25,21 @@ if ( ! class_exists( 'Pie_WCWL_Waitlist_Initialise' ) ) {
          */
         const ID = 'presstest';
 
+        public $file_path    = PIE_TESTING_PLATFORM_FILE_PATH . '/build';
+        public $enqueue_path = PIE_TESTING_PLATFORM_ENQUEUE_PATH . '/build';
+
+       
+
+
         public function init()
         {
-            add_action('admin_menu', array($this, 'add_menu_page'), 20);
+
+            $asset_file = include($this -> file_path. '/index.asset.php');
+
+            add_action( 'admin_menu', array($this, 'add_menu_page'), 20 );
+
+            wp_enqueue_script( 'pt-react-app', $this -> enqueue_path . '/index.js',  $asset_file['dependencies'], $asset_file['version'], true );
+            
         }
 
         /**
@@ -63,7 +76,8 @@ if ( ! class_exists( 'Pie_WCWL_Waitlist_Initialise' ) ) {
 
         public function load_presstest_app(){
             echo "
-                <h1>Hello World!</h1>
+                <div id='app'></div>
+                <h1>HelloWorld</h1>
             ";
         }
 
