@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wordpress/scripts": "^26.13.0"
+    "@wordpress/scripts": "^26.13.0",
+    "react-tabs": "^6.0.2"
   }
 }

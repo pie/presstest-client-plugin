@@ -1,3 +1,9 @@
-div{
-    padding:20px;
-}
+//Global
+@import 'public/css/global/global.scss';
+
+//Utility
+@import 'public/css/utility/buttons.scss';
+
+// Components
+@import 'public/css/components/tabs.scss';
+@import 'public/css/components/testing.scss';

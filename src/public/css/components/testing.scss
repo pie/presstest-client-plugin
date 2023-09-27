@@ -1,0 +1,18 @@
+.form-field{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 30px 10px;
+    border: 1px solid black;
+    border-top: none;
+
+    label{
+        font-size: 1.6rem;
+    }
+
+
+    #new-domain{
+        max-width: 200px;
+    }
+}
