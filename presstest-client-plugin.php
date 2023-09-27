@@ -3,7 +3,7 @@
 * Plugin Name: presstest.io
 * Plugin URI: https://www.your-site.com/
 * Description: Adds an admin page that allows you to run tests on your domain ...
-* Version: 1.0
+* Version: 0.0.1
 * Author: pie-web
 * Author URI: https://pie.co.de/
 **/
