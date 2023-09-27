@@ -65,7 +65,7 @@ jobs:
       # This step is used to get the current date, which we are going to use in the changelog
       - name: Get current date
         id: get_date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
       # This step runs through the files in the plugin and updates all of the relevant version numbers
       # with the number of this release. It also updates the changelog with the current date and then 
       # commits the changes back to the main branch to the repo. 
