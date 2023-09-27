@@ -87,7 +87,7 @@ jobs:
       # so we create them separately.
       - name: Build required zip artifacts
         run: |
-          zip -r -q ~/woocommerce-waitlist-sober-compatibility.zip ./ -x ".git/*" ".github/*" "composer.*" "package.json" "update.json" "DOCKER_ENV" "docker_tag" "*.log" "src/*"
+          zip -r -q ~/presstest-client-plugin.zip ./ -x ".git/*" ".github/*" "composer.*" "package.json" "update.json" "DOCKER_ENV" "docker_tag" "*.log" "src/*" "yarn.lock"
 
       # Finally we create a release in Github, and add the two zip files as artifacts. These can then be
       # downloaded by users of the plugin.   
@@ -98,4 +98,4 @@ jobs:
           name: ${{ needs.check_for_release.outputs.version }}
           body: ${{ needs.check_for_release.outputs.release_body }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "~/presstest.zip,~/update.zip" 
+          artifacts: "~/presstest-client-plugin.zip,~/update.zip" 

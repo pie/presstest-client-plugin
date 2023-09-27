@@ -9,33 +9,48 @@
  * Text Domain: presstest-client-plugin
  **/
 
-
 namespace PIE\PressTestClient;
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-require plugin_dir_path( __FILE__ ) . 'definitions.php';
+/**
+ * Plugin definitions
+ */
+require_once plugin_dir_path( __FILE__ ) . 'definitions.php';
+
+/**
+ * Load Composer autoloader
+ */
+require_once PIE_TESTING_PLATFORM_FILE_PATH . 'vendor/autoload.php';
+
+/**
+ * Check for updates
+ */
+$update_checker = PucFactory::buildUpdateChecker(
+    'https://pie.github.io/presstest-client-plugin/update.json',
+    __FILE__,
+    'presstest-client-plugin'
+);
 
 /**
  * Helpers
  */
-require PIE_TESTING_PLATFORM_FILE_PATH . 'includes/helpers.php';
+require_once PIE_TESTING_PLATFORM_FILE_PATH . 'includes/helpers.php';
 
 /**
  * The core plugin class
  */
-
-require PIE_TESTING_PLATFORM_FILE_PATH . 'includes/classes/class-pt-wp-admin-form.php';
+require_once PIE_TESTING_PLATFORM_FILE_PATH . 'includes/classes/class-pt-wp-admin-form.php';
 
 /**
  * Undocumented function
  *
  * @return void
  */
-
 function run_pt_wp_admin_form() {
     $plugin = new \PIE\ClassAdminPage\PT_WP_ADMIN_FORM();
     $plugin->init();
