@@ -1,6 +1,6 @@
 {
   "name": "presstest-client-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This plugin adds an admin page to allow site owners to setup and run various acceptance tests on their site.",
   "main": "index.js",
   "repository": "git@github.com:pie/presstest-client-plugin.git",
