@@ -3,7 +3,7 @@
  * Plugin Name: presstest.io
  * Plugin URI: https://www.your-site.com/
  * Description: This plugin adds an admin page to allow site owners to setup and run various acceptance tests on their site.
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: pie-web
  * Author URI: https://pie.co.de/
  * Text Domain: presstest-client-plugin
