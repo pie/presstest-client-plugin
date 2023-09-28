@@ -8,13 +8,11 @@ Steps to get up and running:
 1. Activate
 
 Deploying updates:
-
 This plugin is set up to work with integrated WordPress updates through the use of
 [yahnis-elsts/plugin-update-checker](https://github.com/YahnisElsts/plugin-update-checker) and 
 [rymndhng/release-on-push-action](https://github.com/rymndhng/release-on-push-action)
 
 In order to deploy an update:
-
 1. (Once) Enable Github Pages on your repository (Settings > Pages) so that a `update.json` can be read by the Update Checker in production sites.
 1. Create a pull request to merge your branch into `main` and add the appropriate label:
     * `release:major`
