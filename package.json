@@ -1,16 +1,18 @@
 {
-  "name": "presstest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "presstest-client-plugin",
+  "version": "0.0.1",
+  "description": "This plugin adds an admin page to allow site owners to setup and run various acceptance tests on their site.",
+  "main": "plugin.php",
+  "repository": "git@github.com:pie/presstest-client-plugin.git",
+  "author": "The team at PIE <dev@pie.co.de>",
+  "license": "GPL",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "wp-scripts build src/index.js",
     "start": "wp-scripts start src/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@wordpress/scripts": "^26.13.0",
     "react-tabs": "^6.0.2"
